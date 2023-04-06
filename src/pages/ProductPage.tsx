@@ -11,9 +11,9 @@ const ProductPage = (props: Iprops) => {
   return (
     <div>
       {
-        data.map((item) => {
+        data.map((item,index) => {
           return (
-            <div key={item.id}>
+            <div key={index}>
               <a href={'/product/' + item.id}>
                 <h3 >{item.name}</h3>
               </a>

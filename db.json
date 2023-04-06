@@ -1,28 +1,113 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Product A"
+      "name": "Laptop Asus TUF Gaming FX506LHB-HN188W i5 10300H/8GB/512GB/15.6\"FHD/GTX 1650 4GB/Win11",
+      "price": "16.990.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680677359/ecma/jpiuxqwc63es2n8zaqda.webp",
+      "description": "Asus TUF Gaming F15 FX506LHB-HN188W là chiếc laptop gaming giá rẻ với thiết kế tuyệt đẹp, phong cách chuẩn game thủ và cấu hình mạnh mẽ cho cả học tập, công việc cũng như chơi game. Bên cạnh đó là độ bền chuẩn quân đội đã làm nên tên tuổi của dòng TUF.",
+      "categoryId": "2",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Product B"
+      "name": "Laptop MSI Gaming GF63 Thin 11SC-664VN i5-11400H/8GB/512GB/15.6\"FHD/GeForce GTX1650_4GB/Win 11",
+      "price": "15.990.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680677429/ecma/gog2t8woglytgkrzecmi.webp",
+      "description": "Đặc điểm nổi bật của MSI Gaming GF63 Thin 11SC-664VN i5-11400H\nMSI Gaming GF63 Thin 11SC-664VN đưa laptop gaming đến gần người dùng hơn với giá bán chỉ tương đương một chiếc laptop văn phòng thông thường nhưng bạn sẽ nhận được cấu hình vượt trội, màn hình 144Hz mượt mà và thiết kế đầy phong cách.",
+      "categoryId": "2",
+      "id": 2
     },
     {
-      "name": "New Product",
+      "name": "Laptop Lenovo Gaming IdeaPad 3 15IHU6 i5 11320H/8GB/512GB/15.6\"FHD/GeForce RTX 3050 4GB/Win 11",
+      "price": "18.990.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680677502/ecma/jrp5tcziutjlidd03mlp.webp",
+      "description": "Laptop Lenovo Gaming IdeaPad 3 15IHU6 i5 11320H/8GB/512GB/15.6\"FHD/GeForce RTX 3050 4GB/Win 11 sở hữu cấu hình tuyệt vời với những linh kiện mới nhất cùng một thiết kế di động, bền bỉ nhưng lại được bán ở mức giá rẻ đến khó tin. Đây chắc chắn là mẫu laptop gaming giá tốt mà các game thủ sẽ rất yêu thích.",
+      "categoryId": "2",
       "id": 3
     },
     {
-      "name": "New product 2",
+      "name": "iPhone 14 Pro 128GB",
+      "price": "25.290.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680677560/ecma/lyhcn2rfumb4vnxtskrd.webp",
+      "description": "iPhone 14 Pro hội tụ những tính năng đẳng cấp nhất với thiết kế mới, bộ vi xử lý Apple A16 Bionic với sức mạnh chưa từng thấy, camera 48MP nâng cấp vượt trội, màn hình Always-On đầy thú vị và hơn thế nữa. ",
+      "categoryId": "1",
       "id": 4
     },
     {
-      "name": "hello",
+      "name": "Samsung Galaxy S23 Ultra 5G 256GB",
+      "price": "24.990.000₫",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680677608/ecma/exqvefoyiye67m5c5rsy.webp",
+      "description": "Tự hào là điện thoại Galaxy đầu tiên sở hữu cảm biến tuyệt đỉnh 200MP, Samsung Galaxy S23 Ultra đưa người dùng vào không gian nhiếp ảnh tân tiến vượt trội. Sức mạnh còn bùng nổ với vi xử lý Snapdragon mạnh nhất cho cách mạng hiệu năng gaming đột phá. Tất cả được gói gọn trong thiết kế cao cấp và bền vững cho hiện tại và tương lai.",
+      "categoryId": "1",
       "id": 5
     },
     {
-      "name": "new product 3",
+      "name": "Xiaomi Redmi Pad 3GB-64GB",
+      "price": "5.290.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680677658/ecma/pfiry8hlzaaa6d8qfi2k.webp",
+      "description": "Chiếc Redmi Pad đầu tiên cuối cùng cũng được Xiaomi trình làng giới công nghệ, chiếc tablet này thừa hưởng những gì từng xuất hiện trên Xiaomi Pad kết hợp với một mức giá vô cùng phải chăng. Có Redmi Pad đa năng trong tay, niềm vui của bạn sẽ được nhân đôi, vượt ngoài mong đợi. ",
+      "categoryId": "1",
       "id": 6
+    },
+    {
+      "name": "Tai nghe AirPods Pro 2022",
+      "price": "6.290.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680679400/ecma/j3bnczg0y7p52pqgjkw2.webp",
+      "description": "Đặc điểm nổi bật\nThế hệ AirPods Pro 2 được cải tiến nhằm chuyên nghiệp hóa trải nghiệm người dùng theo cách trọn vẹn hơn. Sự hiện diện của chip H2 giúp sản phẩm xử lý âm thanh xuất sắc, những nâng cấp về kỹ nghệ chống ồn, công nghệ xuyên âm và thời lượng pin cho cảm nhận vượt trội so với phiên bản AirPods Pro đầu tiên.",
+      "categoryId": "3",
+      "id": 7
+    },
+    {
+      "name": "Bộ phát Wifi router chuẩn AC1200 ASUS RT-AC1200 V2",
+      "price": "790.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680679440/ecma/d1qfzg69ljg5dzmelvij.webp",
+      "description": "Thiết kế sang trọng, phạm vi phủ sóng rộng\nMặc dù chỉ là một bộ định tuyến WiFi, Asus RT-AC1200 v2 vẫn được nhà sản xuất chăm chút tỉ mỉ về thiết kế bên ngoài. Để mang lại một kiểu dáng sang trọng và nổi bật, toàn bộ khung vỏ của router đều được hoàn thiện bằng nhựa nhám màu đen với các họa tiết nổi khối cắt ngang trên bề mặt. Thiết kế này giúp cho Asus RT-AC1200 v2 dễ dàng phối hợp với các đồ nội thất khác trong nhà. Ngoài ra, chất liệu nhựa nhám cũng giúp bộ định tuyến WiFi dễ dàng vệ sinh, ít bám bụi bẩn và tỏa nhiệt tốt.",
+      "categoryId": "3",
+      "id": 8
+    },
+    {
+      "name": " Ốp lưng Magsafe iPhone 13 Pro Max Mipow",
+      "price": "270.000",
+      "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680679483/ecma/al7vz22nsarg7yxt5kgm.webp",
+      "description": "Được chế tác dành riêng cho siêu phẩm iPhone 13 Pro Max với 3 tiêu chí trọng tâm là đem đến sự bảo vệ tốt nhất, nâng tầm vẻ đẹp cho thiết bị và tương thích với công nghệ sạc MagSafe, bộ ốp lưng chống sốc đến từ Mipow sẽ là giải pháp tối ưu khi chọn mua phụ kiện cho iPhone 13 Pro max.",
+      "categoryId": "3",
+      "id": 9
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "điện thoại"
+    },
+    {
+      "name": "laptop",
+      "id": 2
+    },
+    {
+      "name": "phụ kiện",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "username": "aaaa",
+      "email": "a@gmai.com",
+      "password": "123",
+      "role": "member",
+      "id": 2
+    },
+    {
+      "username": "hieu",
+      "email": "hieu@gmail.com",
+      "password": "123456",
+      "role": "member",
+      "id": 3
+    },
+    {
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "role": "admin",
+      "id": 4
     }
   ]
 }
