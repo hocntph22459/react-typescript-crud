@@ -34,7 +34,7 @@
     },
     {
       "name": "Samsung Galaxy S23 Ultra 5G 256GB",
-      "price": "24.990.000₫",
+      "price": "24.990.000",
       "image": "https://res.cloudinary.com/dpy2w5vus/image/upload/v1680677608/ecma/exqvefoyiye67m5c5rsy.webp",
       "description": "Tự hào là điện thoại Galaxy đầu tiên sở hữu cảm biến tuyệt đỉnh 200MP, Samsung Galaxy S23 Ultra đưa người dùng vào không gian nhiếp ảnh tân tiến vượt trội. Sức mạnh còn bùng nổ với vi xử lý Snapdragon mạnh nhất cho cách mạng hiệu năng gaming đột phá. Tất cả được gói gọn trong thiết kế cao cấp và bền vững cho hiện tại và tương lai.",
       "categoryId": "1",
@@ -72,7 +72,7 @@
       "categoryId": "3",
       "id": 9
     }
-  ],
+  ], 
   "category": [
     {
       "id": 1,

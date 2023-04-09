@@ -19,7 +19,7 @@ const SigninPage = () => {
                 const role = user[0].role;
                 console.log(user[0].role);
                 localStorage.setItem('role', role)
-                alert('User logged in')
+                alert('Đăng nhập thành công')
                 if (role === 'admin') {
                     navigate('/admin')
                 } else {

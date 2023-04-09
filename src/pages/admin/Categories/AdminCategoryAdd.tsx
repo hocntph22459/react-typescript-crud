@@ -1,6 +1,7 @@
 import { Button, Form, Input } from 'antd';
 import { useNavigate } from "react-router-dom";
-import { Icategory } from '../../../interfaces/Category';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 interface IFormInput {
     id: number,
     name: string,
@@ -13,11 +14,21 @@ const AdminCategoryAdd = (props: IProps) => {
     const onFinish = (values: any) => {
         props.onAdd(values);
         navigate('/admin/categories')
+        alert('thêm thành công')
     };
-    
+
+
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
+    const handleClick = () => {
+        toast.success("loadding", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: true
+        });
+      };
+ 
     return (
         <div>
             <Form
@@ -38,9 +49,10 @@ const AdminCategoryAdd = (props: IProps) => {
                     <Input />
                 </Form.Item>
                 <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                    <Button type="primary" style={{backgroundColor:'red'}} htmlType="submit">
+                    <Button onClick={handleClick} type="primary" style={{ backgroundColor: 'red' }} htmlType="submit">
                         thêm mới
                     </Button>
+                    <ToastContainer />
                 </Form.Item>
             </Form>
         </div>

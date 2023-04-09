@@ -22,6 +22,7 @@ const AdminCategoryUpdate = (props: IProps) => {
   const onHandleSubmit: SubmitHandler<IFormInput> = (data) => {
     props.onUpdate(data);
     navigate('/admin/categories')
+    alert('cập nhật thành công')
   }
 
   return (

@@ -1,18 +1,19 @@
 import { Iproduct } from '../../../interfaces/product'
 import { Button, Space, Table } from 'antd'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 interface Iprops {
   products: Iproduct[],
   onRemove: (id: number) => void
 }
-// interface Icolumns{
-//   key: string | number,
-//   title: string,
-//   dataIndex: string,
-// }
-
 const AdminProduct = (props: Iprops) => {
     const handleRemove = (id: number) => {
     props.onRemove(id)
+    toast.success("xóa thành công", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true
+    });
   }
   const columns:any = [
     {
@@ -45,9 +46,9 @@ const AdminProduct = (props: Iprops) => {
         <Space size="middle">
           <a href={`http://localhost:5173/admin/product/${item.key}/update`}>update</a>
           <Button type='primary' style={{backgroundColor:'red'}} onClick={() => handleRemove(item.key)}>removo</Button>
+          <ToastContainer />
         </Space>
       ),
-      // render: (item:any) => <Button type='primary' style={{backgroundColor:'red'}} onClick={() => handleRemove(item.key)}>removo</Button>,
     },
   ];
 

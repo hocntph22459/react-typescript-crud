@@ -8,7 +8,6 @@ import WebsiteLayout from './pages/layouts/WebsiteLayout'
 import { useEffect, useState } from 'react'
 import { addProduct, deleteProduct, getAllProduct, updateProduct } from './api/products'
 import AdminLayout from './pages/layouts/AdminLayout'
-
 import NotFoundPage from './pages/NotFoundPage'
 import { Iproduct } from './interfaces/product'
 import SigninPage from './pages/SigninPage'
@@ -33,13 +32,16 @@ function App() {
   }, [])
 
   const onHandleRemove = (id: number) => {
-    deleteProduct(id).then(() => setProduct(products.filter((item: Iproduct) => item.id !== id)))
+    deleteProduct(id)
+      .then(() => setProduct(products.filter((item: Iproduct) => item.id !== id)))
   }
   const onHandleAdd = (product: Iproduct) => {
-    addProduct(product).then(() => setProduct([...products, product]))
+    addProduct(product)
+      .then(() => setProduct([...products, product]))
   }
   const onHandleUpdate = (product: Iproduct) => {
-    updateProduct(product).then(() => setProduct(products.map((item) => item.id == product.id ? product : item)))
+    updateProduct(product)
+      .then(() => setProduct(products.map((item) => item.id == product.id ? product : item)))
   }
   //categories
   const [cate, setcate] = useState<Icategory[]>([])
@@ -47,53 +49,29 @@ function App() {
     getAllCategory().then(({ data }) => setcate(data))
   }, [])
   const onHandleRemoveCategories = (id: number) => {
-    deleteCategory(id).then(() => setcate(cate.filter((item: Icategory) => item.id !== id)))
+    deleteCategory(id)
+      .then(() => setcate(cate.filter((item: Icategory) => item.id !== id)))
   }
   const onHandleAddCategories = (data: Iproduct) => {
-    addCategory(data).then(() => setcate([...cate, data]))
+    addCategory(data)
+      .then(() => setcate([...cate, data]))
   }
   const onHandleUpdateCategories = (data: Iproduct) => {
-    updateCategory(data).then(() => setcate(cate.map((item) => item.id == data.id ? data : item)))
+    updateCategory(data)
+      .then(() => setcate(cate.map((item) => item.id == data.id ? data : item)))
   }
   // user
   const [user, setuser] = useState<Iusers[]>([])
   useEffect(() => {
     getAllUser().then(({ data }) => setuser(data))
   }, [])
-
-
-  // const handleSignin = async (users: Iusers) => {
-  //   const email = users.email;
-  //   const password = users.password;;
-
-  //   try {
-  //     const response = await fetch('http://localhost:3000/users?email=' + email + '&password=' + password);
-  //     const user = await response.json();
-  //     console.log(user[0]);
-
-  //     if (user.length === 1) {
-  //       // login successful, store user data in session storage or cookie
-  //       const token = user[0].email;
-  //       localStorage.setItem('user', token)
-  //       const role = user[0].role;
-  //       localStorage.setItem('role', role)
-  //       alert('User logged in')
-  //     } else {
-  //       // login failed, display error message
-  //       alert('thông tin bạn nhập chưa chính xác');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error logging in:', error);
-  //   }
-
-  // }
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<WebsiteLayout cate={cate}/>}>
+        <Route path='/' element={<WebsiteLayout cate={cate} />}>
           <Route index element={<Homepage products={products} cate={cate} />} />
           <Route path='product' >
-            <Route index element={<ProductPage products={products} />} />
+            <Route index element={<ProductPage products={products} cate={cate}/>} />
             <Route path=':id' element={<ProductDeltailPage products={products} />} />
           </Route>
           <Route path='category/:id' >
@@ -101,7 +79,7 @@ function App() {
           </Route>
         </Route>
         <Route path='signup' element={<SignupPage />}></Route>
-        <Route path='signin' element={<SigninPage/>}></Route>
+        <Route path='signin' element={<SigninPage />}></Route>
         <Route path='/admin' element={<AdminLayout />}>
           {/* product */}
           <Route path='product'>

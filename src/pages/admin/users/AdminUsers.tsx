@@ -1,5 +1,7 @@
 import { Button, Space, Table } from 'antd'
 import { Iusers } from '../../../interfaces/users'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 interface Iprops {
   user: Iusers[],
   onRemove: (id: number) => void
@@ -8,6 +10,11 @@ interface Iprops {
 const AdminUsers = (props: Iprops) => {
   const handleRemove = (id: number) => {
     props.onRemove(id)
+    toast.success("xóa thành công", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true
+    });
   }
   const columns: any = [
     {
@@ -33,11 +40,10 @@ const AdminUsers = (props: Iprops) => {
       width: 100,
       render: (item: any) => (
         <Space size="middle">
-          <a href={`http://localhost:5173/admin/categories/${item.key}/update`}>update</a>
-          <Button type='primary' style={{ backgroundColor: 'red' }} onClick={() => handleRemove(item.key)}>removo</Button>
+          {localStorage.getItem('user') === 'admin@gmail.com' ? <Button disabled style={{ backgroundColor: 'red' }} onClick={() => handleRemove(item.key)}>removo</Button> :<Button type='primary' style={{ backgroundColor: 'red' }} onClick={() => handleRemove(item.key)}>removo</Button>}
+          <ToastContainer />
         </Space>
       ),
-      // render: (item:any) => <Button type='primary' style={{backgroundColor:'red'}} onClick={() => handleRemove(item.key)}>removo</Button>,
     },
   ];
 

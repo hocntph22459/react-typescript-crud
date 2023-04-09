@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
-
+import {HomeOutlined,UserOutlined,DatabaseOutlined} from '@ant-design/icons';
 const AdminLayout = () => {
     const navigate = useNavigate()
     useEffect(() => {
@@ -15,9 +15,10 @@ const AdminLayout = () => {
             <div className="w-64 px-4">
                 <div className="h-16 flex items-center">
                     <a href="/admin" className="w-48 mx-auto bg-blue-500 hover:bg-blue-700 flex items-center justify-center text-gray-100 py-2 rounded space-x-2 transition duration-150">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                        </svg>
+                        </svg> */}
+                        <HomeOutlined />
                         <span>admin</span>
                     </a>
                 </div>
@@ -33,17 +34,19 @@ const AdminLayout = () => {
                         </li>
                         <li>
                             <a href='/admin/categories' className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-500 flex items-center text-gray-700 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                                </svg> */}
+                                <DatabaseOutlined />
                                 <span>quản lý danh mục</span>
                             </a>
                         </li>
                         <li>
                             <a href='/admin/users' className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-500 flex items-center text-gray-700 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                                </svg>
+                                </svg> */}
+                                <UserOutlined />
                                 <span>quản lý người dùng</span>
                             </a>
                         </li>

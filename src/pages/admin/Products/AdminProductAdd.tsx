@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 interface formData {
     name: string,
     price: number,
@@ -22,6 +24,11 @@ const AdminProductAdd = (props: any) => {
         data.image = await SubmitImage();
         props.onAdd(data)
         navigate('/admin/product')
+        toast.success("thêm sản phẩm thành công!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true
+        });
     }
     const SubmitImage = async () => {
         const data = new FormData();
@@ -38,6 +45,7 @@ const AdminProductAdd = (props: any) => {
     return (
         <div>
             <form onSubmit={handleSubmit(OnHandSubmit)}>
+                <ToastContainer />
                 <div className="mb-6">
                     <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">name</label>
                     <input {...register("name", {
@@ -66,7 +74,7 @@ const AdminProductAdd = (props: any) => {
                     <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Danh mục</label>
                     <select {...register("categoryId", { required: true, })} id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option></option>
-                        ${cate.map((list:any, index) => {
+                        ${cate.map((list: any, index) => {
                             return (
                                 <option key={index} value={list.id}>{list.name}</option>
                             )
@@ -75,7 +83,6 @@ const AdminProductAdd = (props: any) => {
                 </div>
                 <button type="submit" className="mt-[20px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Thêm sản phẩm</button>
             </form>
-
         </div>
     )
 }
